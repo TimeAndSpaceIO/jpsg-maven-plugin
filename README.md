@@ -25,7 +25,7 @@
         </build>
     ```
     
-2. Create file `IntIterator.java` in `src/main/javaTemplates/test` directory:
+2. Create file `CharIterator.java` in `src/main/javaTemplates/test` directory:
     ```java
     package test;
     
