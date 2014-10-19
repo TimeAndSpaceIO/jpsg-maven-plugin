@@ -2,7 +2,7 @@
 
 ### Quick start
 
-1. Add to you `pom.xml`:
+1. Add to your `pom.xml`:
     ```xml
         <build>
             <plugins>
