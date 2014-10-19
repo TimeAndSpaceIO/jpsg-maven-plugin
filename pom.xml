@@ -28,7 +28,7 @@
 
     <modelVersion>4.0.0</modelVersion>
     <artifactId>jpsg-maven-plugin</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <packaging>maven-plugin</packaging>
 
     <name>JPSG Maven plugin</name>
@@ -126,7 +126,7 @@
         <url>scm:git:git@github.com:OpenHFT/jpsg-maven-plugin.git</url>
         <connection>scm:git:git@github.com:OpenHFT/jpsg-maven-plugin.git</connection>
         <developerConnection>scm:git:git@github.com:OpenHFT/jpsg-maven-plugin.git</developerConnection>
-        <tag>master</tag>
+        <tag>jpsg-maven-plugin-1.0</tag>
     </scm>
 
 </project>
