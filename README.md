@@ -1,5 +1,4 @@
-## A Maven plugin for [Java Primitive Specializations Generator](
-https://github.com/TimeAndSpaceIO/java-primitive-specializations-generator)
+## A Maven plugin for [Java Primitive Specializations Generator](https://github.com/TimeAndSpaceIO/java-primitive-specializations-generator)
 
 ### Quick start
 
@@ -51,4 +50,4 @@ to use the generator.
 
 ### Requirements
 
-Maven 3.0 or newer, OpenJDK 1.7 or newer in the Maven's runtime
+Maven 3.0 or newer, OpenJDK 1.7 or newer as the Maven's runtime
