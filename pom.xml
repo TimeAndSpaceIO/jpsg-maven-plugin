@@ -21,7 +21,7 @@
     <parent>
         <groupId>net.openhft</groupId>
         <artifactId>java-parent-pom</artifactId>
-        <version>1.1.2</version>
+        <version>1.1.17</version>
         <relativePath />
     </parent>
 
@@ -33,6 +33,7 @@
 
     <name>JPSG Maven plugin</name>
     <description>Maven plugin for Java Primitive Specializations Generator</description>
+    <url>https://github.com/TimeAndSpaceIO/jpsg-maven-plugin</url>
 
     <prerequisites>
         <maven>3.0</maven>
@@ -136,6 +137,15 @@
                         <version>1.8.1</version>
                     </dependency>
                 </dependencies>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-scm-publish-plugin</artifactId>
+                <version>3.0.0</version>
+                <configuration>
+                    <pubScmUrl>scm:git:git@github.com:TimeAndSpaceIO/jpsg-maven-plugin</pubScmUrl>
+                </configuration>
             </plugin>
 
         </plugins>
