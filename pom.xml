@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  ~ Copyright 2014 Higher Frequency Trading
-  ~ Copyright (c) 2009      Jim Idle
+  ~ Copyright JPSG Maven Plugin Authors
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -27,6 +26,7 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
+    <groupId>io.timeandspace</groupId>
     <artifactId>jpsg-maven-plugin</artifactId>
     <version>1.1-SNAPSHOT</version>
     <packaging>maven-plugin</packaging>
@@ -55,9 +55,9 @@
         </dependency>
 
         <dependency>
-            <groupId>net.openhft</groupId>
+            <groupId>io.timeandspace</groupId>
             <artifactId>jpsg-core</artifactId>
-            <version>1.0</version>
+            <version>1.1</version>
         </dependency>
 
         <dependency>
@@ -117,15 +117,23 @@
                     <dependencyLocationsEnabled>false</dependencyLocationsEnabled>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>7</source>
+                    <target>7</target>
+                </configuration>
+            </plugin>
 
         </plugins>
 
     </build>
 
     <scm>
-        <url>scm:git:git@github.com:OpenHFT/jpsg-maven-plugin.git</url>
-        <connection>scm:git:git@github.com:OpenHFT/jpsg-maven-plugin.git</connection>
-        <developerConnection>scm:git:git@github.com:OpenHFT/jpsg-maven-plugin.git</developerConnection>
+        <url>scm:git:git@github.com:TimeAndSpaceIO/jpsg-maven-plugin.git</url>
+        <connection>scm:git:git@github.com:TimeAndSpaceIO/jpsg-maven-plugin.git</connection>
+        <developerConnection>scm:git:git@github.com:TimeAndSpaceIO/jpsg-maven-plugin.git</developerConnection>
         <tag>master</tag>
     </scm>
 

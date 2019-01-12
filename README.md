@@ -1,4 +1,5 @@
-## A Maven plugin for [JPSG](https://github.com/OpenHFT/Koloboke/tree/master/jpsg)
+## A Maven plugin for [Java Primitive Specializations Generator](
+https://github.com/TimeAndSpaceIO/java-primitive-specializations-generator)
 
 ### Quick start
 
@@ -9,9 +10,9 @@
                 <!-- other plugins... -->
                 
                 <plugin>
-                    <groupId>net.openhft</groupId>
+                    <groupId>io.timeandspace</groupId>
                     <artifactId>jpsg-maven-plugin</artifactId>
-                    <version>1.0</version>
+                    <version>1.1</version>
                     <executions>
                         <execution>
                             <id>jpsg</id>
@@ -43,3 +44,11 @@
 
 5. Open `target/generated-sources/jpsg/test` directory in project explorer and enjoy
 `ByteIterator`..`DoubleIterator` specializations!
+
+See [the JPSG repository](
+https://github.com/TimeAndSpaceIO/java-primitive-specializations-generator) for more info about how
+to use the generator.
+
+### Requirements
+
+Maven 3.0 or newer, OpenJDK 1.7 or newer in the Maven's runtime

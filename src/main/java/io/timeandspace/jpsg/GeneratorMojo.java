@@ -1,5 +1,5 @@
 /*
- * Copyright 2014 Higher Frequency Trading
+ * Copyright JPSG Maven Plugin Authors
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package net.openhft.jpsg;
+package io.timeandspace.jpsg;
 
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
@@ -32,9 +32,6 @@ import java.util.List;
 @Mojo(name = "jpsg", defaultPhase = LifecyclePhase.GENERATE_SOURCES,
         requiresDependencyResolution = ResolutionScope.COMPILE, requiresProject = true)
 public class GeneratorMojo extends AbstractMojo {
-
-    @Parameter(defaultValue = "SHORT")
-    protected ObjectType.IdentifierStyle objectIdStyle;
 
     @Parameter
     protected String defaultTypes;
@@ -68,7 +65,6 @@ public class GeneratorMojo extends AbstractMojo {
 
         Generator g = new Generator();
 
-        g.setObjectIdStyle(objectIdStyle);
         if (defaultTypes != null && !defaultTypes.isEmpty())
             g.setDefaultTypes(defaultTypes);
         if (with != null)
