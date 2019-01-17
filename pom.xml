@@ -28,7 +28,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.timeandspace</groupId>
     <artifactId>jpsg-maven-plugin</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.1</version>
     <packaging>maven-plugin</packaging>
 
     <name>JPSG Maven plugin</name>
@@ -170,7 +170,7 @@
         <url>scm:git:git@github.com:TimeAndSpaceIO/jpsg-maven-plugin.git</url>
         <connection>scm:git:git@github.com:TimeAndSpaceIO/jpsg-maven-plugin.git</connection>
         <developerConnection>scm:git:git@github.com:TimeAndSpaceIO/jpsg-maven-plugin.git</developerConnection>
-        <tag>master</tag>
+        <tag>jpsg-maven-plugin-1.1</tag>
     </scm>
 
 </project>
