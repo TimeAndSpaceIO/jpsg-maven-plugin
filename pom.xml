@@ -58,7 +58,7 @@
         <dependency>
             <groupId>io.timeandspace</groupId>
             <artifactId>jpsg-core</artifactId>
-            <version>1.1</version>
+            <version>1.2</version>
         </dependency>
 
         <dependency>
