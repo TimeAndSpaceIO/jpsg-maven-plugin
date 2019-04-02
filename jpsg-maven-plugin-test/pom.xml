@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>io.timeandspace</groupId>
+    <artifactId>jpsg-maven-plugin-test</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>io.timeandspace</groupId>
+                    <artifactId>jpsg-maven-plugin</artifactId>
+                    <version>1.1</version>
+                    <executions>
+                        <execution>
+                            <id>jpsg-main</id>
+                            <phase>none</phase>
+                            <goals>
+                                <goal>jpsg</goal>
+                            </goals>
+                            <configuration>
+                                <sourceDirectory>${basedir}/src/main/javaTemplates</sourceDirectory>
+                                <with>main sources</with>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>jpsg-test</id>
+                            <phase>none</phase>
+                            <goals>
+                                <goal>jpsg</goal>
+                            </goals>
+                            <configuration>
+                                <sourceDirectory>${basedir}/src/test/javaTemplates</sourceDirectory>
+                                <outputDirectory>
+                                    ${project.build.directory}/generated-test-sources/jpsg
+                                </outputDirectory>
+                                <with>test sources</with>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+
+            <plugin>
+                <groupId>io.timeandspace</groupId>
+                <artifactId>jpsg-maven-plugin</artifactId>
+                <version>1.2-SNAPSHOT</version>
+                <executions>
+                    <execution>
+                        <id>jpsg-main</id>
+                        <phase>generate-sources</phase>
+                    </execution>
+                    <execution>
+                        <id>jpsg-test</id>
+                        <phase>generate-test-sources</phase>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>3.0.0</version>
+                <executions>
+                    <execution>
+                        <id>add-test-sources</id>
+                        <phase>generate-test-sources</phase>
+                        <goals>
+                            <goal>add-test-source</goal>
+                        </goals>
+                        <configuration>
+                            <sources>
+                                <source>
+                                    ${project.build.directory}/generated-test-sources/jpsg
+                                </source>
+                            </sources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

@@ -46,10 +46,7 @@ public class GeneratorMojo extends AbstractMojo {
     protected List<String> never;
 
     @Parameter
-    protected List<String> include;
-
-    @Parameter
-    protected List<String> exclude;
+    protected List<String> excludes;
 
     @Parameter(property = "project", required = true, readonly = true)
     protected MavenProject project;
@@ -76,17 +73,15 @@ public class GeneratorMojo extends AbstractMojo {
         }
         if (never != null)
             g.never(never);
-        if (include != null)
-            g.include(include);
-        if (exclude != null)
-            g.exclude(exclude);
+        if (excludes != null)
+            g.exclude(excludes);
         g.setSource(sourceDirectory);
         g.setTarget(outputDirectory);
 
         try {
             g.generate();
         } catch (IOException e) {
-            throw new MojoExecutionException("Error while JPSG generation", e);
+            throw new MojoExecutionException("Error during JPSG generation", e);
         }
 
         if (project != null) {
