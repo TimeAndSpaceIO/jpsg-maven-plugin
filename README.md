@@ -11,7 +11,7 @@
                 <plugin>
                     <groupId>io.timeandspace</groupId>
                     <artifactId>jpsg-maven-plugin</artifactId>
-                    <version>1.1</version>
+                    <version>1.2</version>
                     <executions>
                         <execution>
                             <id>jpsg</id>
