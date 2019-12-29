@@ -58,7 +58,7 @@
         <dependency>
             <groupId>io.timeandspace</groupId>
             <artifactId>jpsg-core</artifactId>
-            <version>1.3</version>
+            <version>1.4</version>
         </dependency>
 
         <dependency>
@@ -122,8 +122,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>7</source>
-                    <target>7</target>
+                    <source>8</source>
+                    <target>8</target>
                 </configuration>
             </plugin>
 

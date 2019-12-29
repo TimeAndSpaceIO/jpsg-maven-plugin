@@ -169,4 +169,4 @@ Alternative:
 
 ### Requirements
 
-Maven 3.0 or newer, OpenJDK 1.7 or newer as the Maven's runtime
+Maven 3.0 or newer, OpenJDK 1.8 or newer as the Maven's runtime
